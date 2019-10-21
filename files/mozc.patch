@@ -1,0 +1,20 @@
+--- mozc/src/prediction/zero_query_dict.h	2019-10-21 00:07:56.000000000 +0900
++++ mozc/src/prediction/zero_query_dict.h	2019-10-20 21:27:24.814046862 +0900
+@@ -132,6 +132,17 @@ class ZeroQueryDict {
+       return tmp;
+     }
+ 
++    iterator &operator--() {
++      ptr_ -= kTokenByteSize;
++      return *this;
++    }
++
++    iterator operator--(int) {
++      const iterator tmp(ptr_, string_array_);
++      ptr_ -= kTokenByteSize;
++      return tmp;
++    }
++
+     iterator &operator+=(ptrdiff_t n) {
+       ptr_ += n * kTokenByteSize;
+       return *this;

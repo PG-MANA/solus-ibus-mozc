@@ -1,0 +1,42 @@
+name       : ibus-mozc
+version    : 2.23.2815
+release    : 1
+source     :
+    - git|https://github.com/google/mozc : afb03ddfe72dde4cf2409863a3bfea160f7a66d8
+license    : The BSD 3-Clause License and custom
+component  : desktop.core
+summary    : Mozc engine for IBus.
+description: Japanese Input Method Editor for IBus.
+builddeps  :
+    - pkgconfig(ibus-1.0)
+    - pkgconfig(gtk+-2.0)
+    - pkgconfig(Qt5Gui)
+setup      : |
+    %patch -p1 < $pkgfiles/mozc.patch
+build      : |
+    cd src
+    GYP_DEFINES="ibus_mozc_path=/usr/lib64/ibus-mozc/ibus-engine-mozc server_dir=/usr/lib64/mozc" python build_mozc.py gyp
+    python build_mozc.py build -c Release unix/ibus/ibus.gyp:ibus_mozc server/server.gyp:mozc_server gui/gui.gyp:mozc_tool renderer/renderer.gyp:mozc_renderer
+    
+install    : |
+    cd src/out_linux/Release
+    install -m 755 -D mozc_server                           $installdir/usr/lib/mozc/mozc_server
+    install -m 755 mozc_tool                                $installdir/usr/lib/mozc/mozc_tool
+    install -m 755 mozc_renderer                            $installdir/usr/lib/mozc/mozc_renderer
+    install -m 755 -D ibus_mozc                             $installdir/usr/lib/ibus-mozc/ibus-engine-mozc
+    install -m 644 -D gen/unix/ibus/mozc.xml                $installdir/usr/share/ibus/component/mozc.xml
+
+    cd ../../data/images/unix
+    install -m 644 -D ime_product_icon_opensource-32.png    $installdir/usr/share/ibus-mozc/product_icon.png
+    install -m 644 ui-tool.png                              $installdir/usr/share/ibus-mozc/tool.png
+    install -m 644 ui-properties.png                        $installdir/usr/share/ibus-mozc/properties.png
+    install -m 644 ui-dictionary.png                        $installdir/usr/share/ibus-mozc/dictionary.png
+    install -m 644 ui-direct.png                            $installdir/usr/share/ibus-mozc/direct.png
+    install -m 644 ui-hiragana.png                          $installdir/usr/share/ibus-mozc/hiragana.png
+    install -m 644 ui-katakana_half.png                     $installdir/usr/share/ibus-mozc/katakana_half.png
+    install -m 644 ui-katakana_full.png                     $installdir/usr/share/ibus-mozc/katakana_full.png
+    install -m 644 ui-alpha_half.png                        $installdir/usr/share/ibus-mozc/alpha_half.png
+    install -m 644 ui-alpha_full.png                        $installdir/usr/share/ibus-mozc/alpha_full.png
+
+    cd ../../installer/
+    install -m 644 -D credits_en.html                       $installdir/usr/share/doc/ibus-mozc/credits_en.html
