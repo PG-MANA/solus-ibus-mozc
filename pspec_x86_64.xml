@@ -9,7 +9,9 @@
         <PartOf>desktop.core</PartOf>
         <Summary xml:lang="en">Mozc engine for IBus.</Summary>
         <Description xml:lang="en">Japanese Input Method Editor for IBus.</Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">
+            https://getsol.us/sources/README.Solus
+        </Archive>
     </Source>
     <Package>
         <Name>ibus-mozc</Name>
@@ -21,6 +23,7 @@
             <Path fileType="library">/usr/lib/mozc/mozc_renderer</Path>
             <Path fileType="library">/usr/lib/mozc/mozc_server</Path>
             <Path fileType="library">/usr/lib/mozc/mozc_tool</Path>
+            <Path fileType="data">/usr/share/doc/ibus-mozc/credits_en.html</Path>
             <Path fileType="data">/usr/share/ibus-mozc/alpha_full.png</Path>
             <Path fileType="data">/usr/share/ibus-mozc/alpha_half.png</Path>
             <Path fileType="data">/usr/share/ibus-mozc/dictionary.png</Path>
@@ -32,14 +35,13 @@
             <Path fileType="data">/usr/share/ibus-mozc/properties.png</Path>
             <Path fileType="data">/usr/share/ibus-mozc/tool.png</Path>
             <Path fileType="data">/usr/share/ibus/component/mozc.xml</Path>
-            <Path fileType="data">/usr/share/doc/ibus-mozc/credits_en.html</Path>
         </Files>
     </Package>
     <History>
         <Update release="1">
             <Date>2019-10-21</Date>
             <Version>2.23.2815</Version>
-            <Comment>Packaging update</Comment>
+            <Comment>First packaging</Comment>
             <Name>PG_MANA</Name>
             <Email>pg_mana@taprix.org</Email>
         </Update>
