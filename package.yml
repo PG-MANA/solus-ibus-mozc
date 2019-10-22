@@ -26,7 +26,7 @@ install    : |
     pushd src/out_linux/Release
     install -m 00755 -D ibus_mozc                           $installdir/usr/lib/ibus-mozc/ibus-engine-mozc
     install -m 00755 -D mozc_renderer                       $installdir/usr/lib/mozc/mozc_renderer
-    install -m 00755 -D mozc_server                         $installdir/usr/lib/mozc/mozc_server
+    install -m 00755    mozc_server                         $installdir/usr/lib/mozc/mozc_server
     install -m 00755    mozc_tool                           $installdir/usr/lib/mozc/mozc_tool
     install -m 00644 -D gen/unix/ibus/mozc.xml              $installdir/usr/share/ibus/component/mozc.xml
 
