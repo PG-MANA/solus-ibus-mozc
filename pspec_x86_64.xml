@@ -5,7 +5,12 @@
             <Name>PG_MANA</Name>
             <Email>pg_mana@taprix.org</Email>
         </Packager>
-        <License>The BSD 3-Clause License and custom</License>
+        <License>Apache-2.0</License>
+        <License>BSD-3-Clause</License>
+        <License>MS-PL</License>
+        <License>LGPL-2.1-only</License>
+        <License>Unicode-DFS-2015</License>
+        <License>Unlicense</License>
         <PartOf>desktop.core</PartOf>
         <Summary xml:lang="en">Mozc engine for IBus.</Summary>
         <Description xml:lang="en">Japanese Input Method Editor for IBus.</Description>

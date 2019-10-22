@@ -3,7 +3,13 @@ version    : 2.23.2815
 release    : 1
 source     :
     - git|https://github.com/google/mozc : afb03ddfe72dde4cf2409863a3bfea160f7a66d8
-license    : The BSD 3-Clause License and custom
+license    : 
+    - Apache-2.0
+    - BSD-3-Clause
+    - MS-PL
+    - LGPL-2.1-only
+    - Unicode-DFS-2015
+    - Unlicense
 component  : desktop.core
 summary    : Mozc engine for IBus.
 description: Japanese Input Method Editor for IBus.
