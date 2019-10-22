@@ -17,9 +17,11 @@ setup      : |
     %patch -p1 < $pkgfiles/mozc.patch
 build      : |
     cd src
-    GYP_DEFINES="ibus_mozc_path=/usr/lib64/ibus-mozc/ibus-engine-mozc server_dir=/usr/lib64/mozc" python build_mozc.py gyp
-    python build_mozc.py build -c Release unix/ibus/ibus.gyp:ibus_mozc server/server.gyp:mozc_server gui/gui.gyp:mozc_tool renderer/renderer.gyp:mozc_renderer
-    
+    GYP_DEFINES="ibus_mozc_path=/usr/lib64/ibus-mozc/ibus-engine-mozc server_dir=/usr/lib64/mozc" \
+        python build_mozc.py gyp
+    python build_mozc.py build -c Release unix/ibus/ibus.gyp:ibus_mozc server/server.gyp:mozc_server \
+        gui/gui.gyp:mozc_tool renderer/renderer.gyp:mozc_renderer
+
 install    : |
     pushd src/out_linux/Release
     install -m 00755 -D ibus_mozc                           $installdir/usr/lib/ibus-mozc/ibus-engine-mozc
