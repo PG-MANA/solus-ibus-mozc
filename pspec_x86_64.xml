@@ -28,7 +28,6 @@
             <Path fileType="library">/usr/lib/mozc/mozc_renderer</Path>
             <Path fileType="library">/usr/lib/mozc/mozc_server</Path>
             <Path fileType="library">/usr/lib/mozc/mozc_tool</Path>
-            <Path fileType="data">/usr/share/doc/ibus-mozc/credits_en.html</Path>
             <Path fileType="data">/usr/share/ibus-mozc/alpha_full.png</Path>
             <Path fileType="data">/usr/share/ibus-mozc/alpha_half.png</Path>
             <Path fileType="data">/usr/share/ibus-mozc/dictionary.png</Path>
@@ -40,6 +39,7 @@
             <Path fileType="data">/usr/share/ibus-mozc/properties.png</Path>
             <Path fileType="data">/usr/share/ibus-mozc/tool.png</Path>
             <Path fileType="data">/usr/share/ibus/component/mozc.xml</Path>
+            <Path fileType="doc">/usr/share/doc/ibus-mozc/credits_en.html</Path>
         </Files>
     </Package>
     <History>
