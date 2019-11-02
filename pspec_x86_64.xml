@@ -38,9 +38,9 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2019-10-24</Date>
+            <Date>2019-11-02</Date>
             <Version>2.23.2815</Version>
-            <Comment>Packaging update</Comment>
+            <Comment>First packaging</Comment>
             <Name>PG_MANA</Name>
             <Email>pg_mana@taprix.org</Email>
         </Update>
