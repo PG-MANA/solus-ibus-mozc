@@ -5,23 +5,18 @@
             <Name>PG_MANA</Name>
             <Email>pg_mana@taprix.org</Email>
         </Packager>
-        <License>Apache-2.0</License>
         <License>BSD-3-Clause</License>
-        <License>MS-PL</License>
-        <License>LGPL-2.1-only</License>
-        <License>Unicode-DFS-2015</License>
-        <License>Unlicense</License>
         <PartOf>desktop.core</PartOf>
         <Summary xml:lang="en">Mozc engine for IBus.</Summary>
-        <Description xml:lang="en">Japanese Input Method Editor for IBus.</Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">
-            https://getsol.us/sources/README.Solus
-        </Archive>
+        <Description xml:lang="en">Japanese Input Method Editor for IBus.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>ibus-mozc</Name>
         <Summary xml:lang="en">Mozc engine for IBus.</Summary>
-        <Description xml:lang="en">Japanese Input Method Editor for IBus.</Description>
+        <Description xml:lang="en">Japanese Input Method Editor for IBus.
+</Description>
         <PartOf>desktop.core</PartOf>
         <Files>
             <Path fileType="library">/usr/lib/ibus-mozc/ibus-engine-mozc</Path>
@@ -39,14 +34,13 @@
             <Path fileType="data">/usr/share/ibus-mozc/properties.png</Path>
             <Path fileType="data">/usr/share/ibus-mozc/tool.png</Path>
             <Path fileType="data">/usr/share/ibus/component/mozc.xml</Path>
-            <Path fileType="doc">/usr/share/doc/ibus-mozc/credits_en.html</Path>
         </Files>
     </Package>
     <History>
         <Update release="1">
-            <Date>2019-10-21</Date>
+            <Date>2019-10-24</Date>
             <Version>2.23.2815</Version>
-            <Comment>First packaging</Comment>
+            <Comment>Packaging update</Comment>
             <Name>PG_MANA</Name>
             <Email>pg_mana@taprix.org</Email>
         </Update>
