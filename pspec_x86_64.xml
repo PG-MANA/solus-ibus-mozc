@@ -2,7 +2,7 @@
     <Source>
         <Name>ibus-mozc</Name>
         <Packager>
-            <Name>PG_MANA</Name>
+            <Name>PG-MANA</Name>
             <Email>pg_mana@taprix.org</Email>
         </Packager>
         <License>BSD-3-Clause</License>
@@ -37,11 +37,11 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2019-11-02</Date>
-            <Version>2.23.2815</Version>
-            <Comment>First packaging</Comment>
-            <Name>PG_MANA</Name>
+        <Update release="2">
+            <Date>2021-04-25</Date>
+            <Version>2.26.4346.102</Version>
+            <Comment>Packaging update</Comment>
+            <Name>PG-MANA</Name>
             <Email>pg_mana@taprix.org</Email>
         </Update>
     </History>
