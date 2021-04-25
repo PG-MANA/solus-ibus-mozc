@@ -7,7 +7,7 @@ You can see instruction of solbuild at https://getsol.us/articles/packaging/buil
 
 1. Install develop components : ```sudo eopkg it -c system.devel```
 2. Install solbuild : ```sudo eopkg it solbuild```
-3. Initialize solbuild : ```sodo solbuild init```
+3. Initialize solbuild : ```sudo solbuild init```
 4. Clone this repository : ```git clone https://github.com/PG-MANA/solus-ibus-mozc && cd solus-ibus-mozc```
 5. Build ibus-mozc package : ```sudo solbuild build```
 
